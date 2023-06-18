@@ -15,11 +15,9 @@ import static by.ledza.OperatorType.*;
 public class ExpressionExecutor {
 
     Stack<BaseValue> operandStack = new Stack<>();
-
     Map<OperatorType, Function<TreeValue, BaseValue>> mapExecutor;
 
     public BaseValue executeTree(TreeValue now){
-
         Function<TreeValue, BaseValue> func = mapExecutor.get(now.getOperatorType());
         if (func != null){
             return func.apply(now);

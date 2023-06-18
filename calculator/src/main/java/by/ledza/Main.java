@@ -7,9 +7,9 @@ import by.ledza.values.RubbleValue;
 
 public class Main {
     public static void main(String[] args) {
-        String fuck = args[0];
+        String param = args[0];
         Parser parser = new Parser();
-        TreeValue tree = parser.parse(fuck);
+        TreeValue tree = parser.parse(param);
         ExpressionExecutor expressionExecutor = new ExpressionExecutor();
         BaseValue res = expressionExecutor.executeTree(tree);
 
